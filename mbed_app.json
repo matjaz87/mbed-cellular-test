@@ -1,0 +1,48 @@
+{
+    "config": {
+        "sock-type": "TCP",
+        "echo-server-hostname": {
+            "help": "Echo server host name.",
+            "value": "\"echo.mbedcloudtesting.com\""
+        },
+        "echo-server-port": {
+            "help": "Echo server port number.",
+            "value": 7
+        },
+        "trace-level": {
+            "help": "Options are TRACE_LEVEL_ERROR,TRACE_LEVEL_WARN,TRACE_LEVEL_INFO,TRACE_LEVEL_DEBUG",
+            "macro_name": "MBED_TRACE_MAX_LEVEL",
+            "value": "TRACE_LEVEL_INFO"
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "QUECTEL_EC2X.baudrate": 115200,
+            "QUECTEL_EC2X.provide-default": true,
+            "QUECTEL_EC2X.tx": "PA_2",
+            "QUECTEL_EC2X.rx": "PA_3",
+            "QUECTEL_EC2X.rts": "PA_1",
+            "QUECTEL_EC2X.cts": "PA_0",
+            "mbed-trace.enable": true,            
+            "lwip.ipv4-enabled": true,
+            "lwip.ipv6-enabled": false,
+            "lwip.ethernet-enabled": false,
+            "lwip.ppp-enabled": true,
+            "lwip.tcp-enabled": true,            
+            "ppp.ipv4-enabled": true,            
+            "ppp.ipv6-enabled": false,
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 9600,
+            "platform.default-serial-baud-rate": 9600,
+            "platform.stdio-buffered-serial": true,
+            "platform.error-filename-capture-enabled": true,
+            "cellular.debug-at": true,
+            "cellular.use-apn-lookup": true,
+            "nsapi.default-cellular-sim-pin": null,
+            "nsapi.default-cellular-plmn": null,
+            "nsapi.default-cellular-apn": null,
+            "nsapi.default-cellular-username": null,
+            "nsapi.default-cellular-password": null
+        }
+    }
+}
